@@ -1,0 +1,16 @@
+c:\users\giorgio pc\source\repos\databaseconntest+ù\databaseconntest+ù\obj\Debug\databaseconntest+ù.vbprojAssemblyReference.cache
+c:\users\giorgio pc\source\repos\databaseconntest+ù\databaseconntest+ù\obj\Debug\databaseconntest_ù.Resources.resources
+c:\users\giorgio pc\source\repos\databaseconntest+ù\databaseconntest+ù\obj\Debug\databaseconntest+ù.vbproj.GenerateResource.cache
+c:\users\giorgio pc\source\repos\databaseconntest+ù\databaseconntest+ù\obj\Debug\databaseconntest+ù.vbproj.CoreCompileInputs.cache
+c:\users\giorgio pc\source\repos\databaseconntest+ù\databaseconntest+ù\bin\Debug\databaseconntest+ù.exe.config
+c:\users\giorgio pc\source\repos\databaseconntest+ù\databaseconntest+ù\bin\Debug\databaseconntest+ù.exe
+c:\users\giorgio pc\source\repos\databaseconntest+ù\databaseconntest+ù\bin\Debug\databaseconntest+ù.pdb
+c:\users\giorgio pc\source\repos\databaseconntest+ù\databaseconntest+ù\bin\Debug\databaseconntest+ù.xml
+c:\users\giorgio pc\source\repos\databaseconntest+ù\databaseconntest+ù\bin\Debug\MySql.Data.dll
+c:\users\giorgio pc\source\repos\databaseconntest+ù\databaseconntest+ù\bin\Debug\Google.Protobuf.dll
+c:\users\giorgio pc\source\repos\databaseconntest+ù\databaseconntest+ù\bin\Debug\MySql.Data.xml
+c:\users\giorgio pc\source\repos\databaseconntest+ù\databaseconntest+ù\obj\Debug\databaseconntest+ù.vbproj.CopyComplete
+c:\users\giorgio pc\source\repos\databaseconntest+ù\databaseconntest+ù\obj\Debug\databaseconntest+ù.exe
+c:\users\giorgio pc\source\repos\databaseconntest+ù\databaseconntest+ù\obj\Debug\databaseconntest+ù.xml
+c:\users\giorgio pc\source\repos\databaseconntest+ù\databaseconntest+ù\obj\Debug\databaseconntest+ù.pdb
+c:\users\giorgio pc\source\repos\databaseconntest+ù\databaseconntest+ù\obj\Debug\databaseconntest_ù.LoginForm1.resources

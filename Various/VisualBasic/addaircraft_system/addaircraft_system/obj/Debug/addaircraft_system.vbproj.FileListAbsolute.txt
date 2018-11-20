@@ -1,0 +1,12 @@
+C:\Users\Giorgio pc\source\repos\addaircraft_system\addaircraft_system\bin\Debug\addaircraft_system.exe.config
+C:\Users\Giorgio pc\source\repos\addaircraft_system\addaircraft_system\bin\Debug\addaircraft_system.exe
+C:\Users\Giorgio pc\source\repos\addaircraft_system\addaircraft_system\bin\Debug\addaircraft_system.pdb
+C:\Users\Giorgio pc\source\repos\addaircraft_system\addaircraft_system\bin\Debug\addaircraft_system.xml
+C:\Users\Giorgio pc\source\repos\addaircraft_system\addaircraft_system\obj\Debug\addaircraft_system.Form1.resources
+C:\Users\Giorgio pc\source\repos\addaircraft_system\addaircraft_system\obj\Debug\addaircraft_system.Resources.resources
+C:\Users\Giorgio pc\source\repos\addaircraft_system\addaircraft_system\obj\Debug\addaircraft_system.vbproj.GenerateResource.cache
+C:\Users\Giorgio pc\source\repos\addaircraft_system\addaircraft_system\obj\Debug\addaircraft_system.vbproj.CoreCompileInputs.cache
+C:\Users\Giorgio pc\source\repos\addaircraft_system\addaircraft_system\obj\Debug\addaircraft_system.exe
+C:\Users\Giorgio pc\source\repos\addaircraft_system\addaircraft_system\obj\Debug\addaircraft_system.xml
+C:\Users\Giorgio pc\source\repos\addaircraft_system\addaircraft_system\obj\Debug\addaircraft_system.pdb
+C:\Users\Giorgio pc\source\repos\addaircraft_system\addaircraft_system\obj\Debug\addaircraft_system.vbprojAssemblyReference.cache

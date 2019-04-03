@@ -18,8 +18,8 @@ Module connection
         Dim myConnectionString As String
         'Initializing connnection options format to string'
         myConnectionString = "Server=localhost;" _
-            & "Uid=root;" _
-            & "pwd=Cn2e8LXWnAp4vGCr6ryvsW6n;" _
+            & "Uid=****;" _
+            & "pwd=************;" _
             & "Database=sys;" _
             & "Connect Timeout=30;" _
             & "Protocol=unix;" _

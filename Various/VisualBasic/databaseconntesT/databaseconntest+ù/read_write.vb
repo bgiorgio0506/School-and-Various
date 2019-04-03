@@ -53,9 +53,9 @@ Module read_write
         '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         'Dim var As String
         'var=...
-        'sql = "INSERT INTO iscritti(ID,nome,cognome,mail,data_nascita,vid, password) VALUES(NULL,'"var"','Bella','bgiorgio0506@gmail.com','2001-06-05','56789','Lalalala01')"
+        'sql = "INSERT INTO iscritti(ID,nome,cognome,mail,data_nascita,vid, password) VALUES(NULL,'"var"','****','******@domain.com','0000-00-00','56789','Lalalala01')"
 
-        sql = "INSERT INTO iscritti(ID,nome,cognome,mail,data_nascita,vid, password) VALUES(NULL,'Giorgio','Bella','bgiorgio0506@gmail.com','2001-06-05','56789','Lalalala01')"
+        sql = "INSERT INTO iscritti(ID,nome,cognome,mail,data_nascita,vid, password) VALUES(NULL,'******','****','*****@domain.com','0000-00-00','56789','Lalalala01')"
         Try
             sqlCommand = New MySqlCommand(sql, conn)
             datareader = sqlCommand.ExecuteReader()

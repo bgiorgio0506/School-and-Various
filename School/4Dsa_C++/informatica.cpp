@@ -1,16 +1,17 @@
 /*
-* Questo programma è stato creato a scopo scolastico. Andremo ad usare i concetti principali della OOP
+* Questo programma è stato creato a scopo scolastico. Andremo ad usare i seguemti concetti principali della OOP
 * Incapsulamento: cioè il ragruppare le funzionalità di un oggetto in metodi
 * L'Eredità : andremo a creare un sistema di eredità con una SuperClasse e SottoClasse
+* da notare che possiamo avere pure un eredità multipla e virtuale su una classe
 * L'overloading  : La possibilità di usare lo stesso nome per un metodo che ha parametri diversi e/o scopo diverso
 * L'override : La possibilità di riscrivere un metodo di una superclasse per una sottoclasse
-              ***Il Progromma***
+              ***Il Programma***
 ******************************************************************************
-Questo programma conterra una famiglia di poligoni es Poligoni-> Quadrato, Rettangolo,
-Paralelogramma, trinagolo. Clacoleremo Area e perimetro. Crereomo un overloading
-di un metodo per un solo poligono che ci permette di calcolare in modo divero l'area e il perimetro
+Questo programma contiene una famiglia di poligoni es Poligoni-> Quadrato, Rettangolo,
+Paralelogramma, trinagolo. Clacoleremo Area e perimetro. Useremo l' overloading
+di uno o più metodi per un solo poligono che ci permette di calcolare in modo divero l'area e il perimetro
 ******************************************************************************
-* This program is under GNU License Copyright 2019 Giorgio Bella
+* This program is under GNU 3.0 License Copyright 2019 Giorgio Bella
 ******************************************************************************
 */
 
@@ -19,10 +20,10 @@ di un metodo per un solo poligono che ci permette di calcolare in modo divero l'
 #include "math.h"
 // using standar namespace
 using namespace std;
-// define a type float with name lato
 
 class poligono {
   protected:
+    //we don't trust other classes so we use protected to gain access only to the friend classes
     typedef float lato;
     lato lato1;
   public:
@@ -32,16 +33,13 @@ class poligono {
     float area(){
       return pow(lato1,2);
     }
-  // Destroy
-  //virtual ~poligono (){}
+
 };
-  //Derivate class "Eredita"
+  //Derivate class "Eredità"
   class quadrato:public poligono {
       private:
         float dataArea;
         float datoPerimetro;
-        //float latoQuadrato;
-        //Quadrato nothing to add in the decleration scope we can access to the lato1 var in the superclass
       public:
 
         quadrato (lato a){
@@ -62,15 +60,20 @@ class poligono {
           return lato1 * lato1;
         }
 
+        //overloading method area
         float area(float datoPerimetro){
           lato lato;
           lato = datoPerimetro/4;
           return pow(lato,2);
         }
+        //destroy
+        ~quadrato (){
+         cout << "Oggetto distrutto" << '\n';
+       }
   };
 
   class rettangolo: public poligono{
-    protected:
+    private:
       lato latoRet2;
 
     public:
@@ -85,6 +88,10 @@ class poligono {
       float area(){
         return lato1*latoRet2;
       }
+      //destroy
+      ~rettangolo (){
+       cout << "Oggetto distrutto" << '\n';
+     }
   };
 
   class paralelogramma: public poligono{
@@ -93,7 +100,6 @@ class poligono {
      lato latoPar ;
     public:
     paralelogramma(lato a, lato b, lato h){
-      lato1 = 0;
       lato1 = a;
       latoPar = b;
       altezza = h;
@@ -111,6 +117,10 @@ class poligono {
         return 0;
       }
     }
+    //destroy
+    ~paralelogramma (){
+     cout << "Oggetto distrutto" << '\n';
+   }
   };
 
   class trinagolo:public poligono{
@@ -121,8 +131,6 @@ class poligono {
 
     public:
       trinagolo(lato a,lato b, lato c, lato h){
-        //Inizializzazione variabile derivata class poligono
-        lato1= 0;
         lato1 = a;
         latoTri1 = b;
         latoTri2 = c;
@@ -144,6 +152,10 @@ class poligono {
         }
 
       }
+      //destroy
+      ~trinagolo (){
+       cout << "Oggetto distrutto" << '\n';
+     }
   };
 
   //main
@@ -165,7 +177,9 @@ class poligono {
     cin >> dper;
     //overloading method
     cout << "Perimetro = " <<q.area(dper)<< '\n';
+    q.~quadrato();
     cout <<'\n';
+    cout << '\n';
 
     /*rettangolo*/
     /*reinitialization vars*/
@@ -178,7 +192,9 @@ class poligono {
     rettangolo r(a,b);
     cout << "Perimetro= " << r.perimetro() << '\n';
     cout << "Area = " << r.area()<< '\n';
+    r.~rettangolo();
     cout <<'\n';
+    cout << '\n';
 
     /* Pentagono */
     cout << "\n/**** Paralelogramma Section *****/" << '\n';
@@ -191,7 +207,10 @@ class poligono {
     paralelogramma p(a,b,h);
     cout << "Perimetro= " << p.perimetro() << '\n';
     cout << "Area = " << p.area()<< '\n';
+    p.~paralelogramma();
+    cout << '\n';
     cout <<'\n';
+
 
     /* Triangolo */
     cout << "\n/**** Triangolo Section *****/" << '\n';
@@ -206,6 +225,7 @@ class poligono {
     trinagolo t(a,b,c,h);
     cout << "Perimetro= " << t.perimetro() << '\n';
     cout << "Area = " << t.area()<< '\n';
+    t.~trinagolo();
 
     return 0;
   }

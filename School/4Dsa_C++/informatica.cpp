@@ -21,7 +21,6 @@ di un metodo per un solo poligono che ci permette di calcolare in modo divero l'
 using namespace std;
 // define a type float with name lato
 
-
 class poligono {
   protected:
     typedef float lato;
@@ -41,12 +40,13 @@ class poligono {
       private:
         float dataArea;
         float datoPerimetro;
+        //float latoQuadrato;
         //Quadrato nothing to add in the decleration scope we can access to the lato1 var in the superclass
       public:
-        quadrato (float lato1){
-          lato1 = lato1;
-          cout << "Object instancieted" << '\n';
-          cout <<lato1<<'\n';
+
+        quadrato (lato a){
+          lato1 = a;
+          cout << "\nObject instancieted" << '\n';
         }
         float perimetro(){
           return  lato1 * 4;
@@ -57,10 +57,11 @@ class poligono {
           lato = sqrt(dataArea);
           return lato * 4;
         }
+
         float area(){
-            lato1 = lato1;
           return lato1 * lato1;
         }
+
         float area(float datoPerimetro){
           lato lato;
           lato = datoPerimetro/4;
@@ -74,9 +75,9 @@ class poligono {
 
     public:
       //construttore
-      rettangolo(lato lato1 , lato latoRet2){
-        lato1 = lato1;
-        latoRet2 = latoRet2;
+      rettangolo(lato a , lato b){
+        lato1 = a;
+        latoRet2 = b;
       }
       float perimetro(){
         return (2*lato1)+(2*latoRet2);
@@ -85,27 +86,26 @@ class poligono {
         return lato1*latoRet2;
       }
   };
- /*Class paralelogramma is a derivated of rettangolo for the compcet is-a we can see
- * our paralelogramma as a rectangular so we have a sencond layer of eredity
- */
+
   class paralelogramma: public poligono{
     private:
      lato altezza;
-     lato latoRet2;
+     lato latoPar ;
     public:
-    paralelogramma(lato lato1, lato latoRet2, lato altezza){
-      lato1 = lato1;
-      latoRet2 = latoRet2;
-      altezza = altezza;
+    paralelogramma(lato a, lato b, lato h){
+      lato1 = 0;
+      lato1 = a;
+      latoPar = b;
+      altezza = h;
     }
     float perimetro(){
-      return  (2*lato1)+(2*latoRet2);
+      return  (2*lato1)+(2*latoPar);
     }
     float area(){
-      if (lato1 > latoRet2) {
+      if (lato1 > latoPar) {
         return altezza * lato1;
-      }else if (latoRet2>lato1){
-        return altezza * latoRet2;
+      }else if (latoPar >= lato1){
+        return altezza * latoPar;
       }else{
         cout << "Error" << '\n';
         return 0;
@@ -120,11 +120,13 @@ class poligono {
       lato altTriangolo;
 
     public:
-      trinagolo(lato lato1,lato latoTri1, lato latoTri2, lato altTriangolo){
-        lato1 = lato1;
-        latoTri1 = latoTri1;
-        latoTri2 = latoTri2;
-        altTriangolo = altTriangolo;
+      trinagolo(lato a,lato b, lato c, lato h){
+        //Inizializzazione variabile derivata class poligono
+        lato1= 0;
+        lato1 = a;
+        latoTri1 = b;
+        latoTri2 = c;
+        altTriangolo = h;
       }
       float perimetro(){
         return lato1 + latoTri1 + latoTri2;
@@ -146,10 +148,13 @@ class poligono {
 
   //main
   int main() {
-    float a , b, per, ar, dper, dar;
+    float a , b, c, h, dper, dar;
+    //Quadrato (Bare in mind I will implement a menu to choose what to do)
+    cout << "\n/**** Quadrato Section *****/" << '\n';
     cout << "Inserisci lato quadrato" << '\n';
     cin >> a;
     quadrato q(a);
+    // overiding methods
     cout << "Perimetro= " << q.perimetro() << '\n';
     cout << "Area = " << q.area()<< '\n';
     cout << "Inserisici un area" << '\n';
@@ -160,6 +165,47 @@ class poligono {
     cin >> dper;
     //overloading method
     cout << "Perimetro = " <<q.area(dper)<< '\n';
+    cout <<'\n';
+
+    /*rettangolo*/
+    /*reinitialization vars*/
+    a = 0;
+    cout << "\n/**** Rettangolo Section *****/" << '\n';
+    cout << "Inserisci lato Rettangolo" << '\n';
+    cin >> a;
+    cout << "Inserisci lato Rettangolo" << '\n';
+    cin >> b;
+    rettangolo r(a,b);
+    cout << "Perimetro= " << r.perimetro() << '\n';
+    cout << "Area = " << r.area()<< '\n';
+    cout <<'\n';
+
+    /* Pentagono */
+    cout << "\n/**** Paralelogramma Section *****/" << '\n';
+    cout << "Inserisci lato Paralelogramma" << '\n';
+    cin >> a;
+    cout << "Inserisci lato Paralelogramma" << '\n';
+    cin >> b;
+    cout << "Inserisci altezza Paralelogramma" << '\n';
+    cin >> h;
+    paralelogramma p(a,b,h);
+    cout << "Perimetro= " << p.perimetro() << '\n';
+    cout << "Area = " << p.area()<< '\n';
+    cout <<'\n';
+
+    /* Triangolo */
+    cout << "\n/**** Triangolo Section *****/" << '\n';
+    cout << "Inserisci base Triangolo" << '\n';
+    cin >> a;
+    cout << "Inserisci lato Triangolo" << '\n';
+    cin >> b;
+    cout << "Inserisci lato Triangolo" << '\n';
+    cin >> c;
+    cout << "Inserisci altezza Triangolo" << '\n';
+    cin >> h;
+    trinagolo t(a,b,c,h);
+    cout << "Perimetro= " << t.perimetro() << '\n';
+    cout << "Area = " << t.area()<< '\n';
 
     return 0;
   }

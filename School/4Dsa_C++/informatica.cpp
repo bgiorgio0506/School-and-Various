@@ -2,14 +2,18 @@
 * Questo programma è stato creato a scopo scolastico. Andremo ad usare i seguemti concetti principali della OOP
 * Incapsulamento: cioè il ragruppare le funzionalità di un oggetto in metodi
 * L'Eredità : andremo a creare un sistema di eredità con una SuperClasse e SottoClasse
-* da notare che possiamo avere pure un eredità multipla e virtuale su una classe
 * L'overloading  : La possibilità di usare lo stesso nome per un metodo che ha parametri diversi e/o scopo diverso
 * L'override : La possibilità di riscrivere un metodo di una superclasse per una sottoclasse
+* Programmazione modulare: La programmazione modulare ci permette di creare dei così detti moduli interdipendenti ma separati
+* ciò auita il riutilizzo del codice o del modulo stesso
               ***Il Programma***
 ******************************************************************************
 Questo programma contiene una famiglia di poligoni es Poligoni-> Quadrato, Rettangolo,
 Paralelogramma, trinagolo. Clacoleremo Area e perimetro. Useremo l' overloading
-di uno o più metodi per un solo poligono che ci permette di calcolare in modo divero l'area e il perimetro
+di uno o più metodi per un solo poligono che ci permette di calcolare in modo divero l'area e il perimetro.
+Questo programma conterrà un menu sviluppato nel modulo menu.h .
+--Martedì 07/05/19
+Il programma verrà piano piano convertito secondo la programmazione modulare
 ******************************************************************************
 * This program is under GNU 3.0 License Copyright 2019 Giorgio Bella
 ******************************************************************************

@@ -13,39 +13,46 @@ using namespace std;
 class bank{
    private:
      long investiment;
-     int percent;
+     double percent;
      int compaunding;
 
   public:
     //cunstructor
-     bank( long TotInvestiment, int RatePercent,int AnnualCompounding){
+     bank( double TotInvestiment, double RatePercent,int AnnualCompounding){
        investiment = TotInvestiment;
        percent = RatePercent;
        compaunding = AnnualCompounding;
      }
      //methods
-     float CalculateInvestiment(){
+     long CalculateInvestiment(){
+       //Decleration of loacl vars
        double decimalP;
-       long TotInvSum;
+       double TotInvSum;
+       long   TotInv;
+       float  exp;
+
+       //Calculate TotInv
        decimalP = percent/100;
-       //cout << decimalP << '\n';
-       TotInvSum =1+decimalP/compaunding;
-       //cout << TotInvSum << '\n';
-       TotInvSum =investiment * TotInvSum;
-       //cout << TotInvSum << '\n';
-       //TotInvSum = pow(5,TotInvSum);
-       //cout << TotInvSum << '\n';
-       return TotInvSum;
+       TotInvSum = decimalP/compaunding;
+       TotInvSum = TotInvSum + 1;
+       exp =  compaunding * percent+1; //Add one to the exponet
+       TotInvSum =pow(TotInvSum,exp);
+       TotInv = investiment * TotInvSum;
+
+       return TotInv;
      }
 
      ~bank (){
-       cout << "object destroy" << '\n';
+       cout << "Ended" << '\n';
      }
 };
 
+
 int main() {
-  long TotInvestiment;
-  int RatePercent, AnnualCompounding;
+  double TotInvestiment, RatePercent;
+  int  AnnualCompounding;
+  bool continue;
+
 
   cout << "Insert the total of your investment" << '\n';
   cin >> TotInvestiment;
@@ -53,9 +60,9 @@ int main() {
   cin >> RatePercent;
   cout << "Insert Annual Compound" << '\n';
   cin >> AnnualCompounding;
-  bank Inv(TotInvestiment,RatePercent,AnnualCompounding);
-  TotInvestiment = Inv.CalculateInvestiment();
-  //cout << "Final investment is: " << Inv.CalculateInvestiment() << '\n';
+  bank Inve1(TotInvestiment,RatePercent,AnnualCompounding);
+  inv1 = Inve1.CalculateInvestiment()
+  cout << "Final investment is: " << inv1 << '\n';
   Inv.~bank();
   return 0;
 }

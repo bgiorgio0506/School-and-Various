@@ -61,8 +61,7 @@ int main() {
   cout << "Insert Annual Compound" << '\n';
   cin >> AnnualCompounding;
   bank Inve1(TotInvestiment,RatePercent,AnnualCompounding);
-  inv1 = Inve1.CalculateInvestiment()
-  cout << "Final investment is: " << inv1 << '\n';
+  cout << "Final investment is: " << Inve1.CalculateInvestiment() << '\n';
   Inv.~bank();
   return 0;
 }

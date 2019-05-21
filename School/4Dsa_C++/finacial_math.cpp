@@ -12,7 +12,8 @@ using namespace std;
 
 class bank{
    private:
-     long investiment;
+     typedef double rate;
+     long investiment, TotInv;
      double percent;
      int compaunding;
 
@@ -28,7 +29,6 @@ class bank{
        //Decleration of loacl vars
        double decimalP;
        double TotInvSum;
-       long   TotInv;
        float  exp;
 
        //Calculate TotInv
@@ -42,6 +42,16 @@ class bank{
        return TotInv;
      }
 
+     duble CalculateTrueRate(){
+       rate AnnualRate;
+       double exp;
+
+       AnnualRate = TotInv/investiment;
+       exp = 1/percent;
+       AnnualRate = pow(AnnualRate,exp);
+       AnnualRate = AnnualRate -1;
+     }
+
      ~bank (){
        cout << "Ended" << '\n';
      }
@@ -51,7 +61,6 @@ class bank{
 int main() {
   double TotInvestiment, RatePercent;
   int  AnnualCompounding;
-  bool continue;
 
 
   cout << "Insert the total of your investment" << '\n';

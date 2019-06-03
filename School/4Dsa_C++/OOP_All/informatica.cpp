@@ -22,6 +22,8 @@ Il programma verrà piano piano convertito secondo la programmazione modulare
 /*Including base library for input and output data and math operation in case needed*/
 #include "iostream"
 #include "math.h"
+#include "menu.h"
+
 // using standar namespace
 using namespace std;
 
@@ -165,9 +167,10 @@ class poligono {
   //main
   int main() {
     float a , b, c, h, dper, dar;
+    menu menu();
     //Quadrato (Bare in mind I will implement a menu to choose what to do)
-    cout << "\n/**** Quadrato Section *****/" << '\n';
-    cout << "Inserisci lato quadrato" << '\n';
+    //cout << "\n/**** Quadrato Section *****/" << '\n';
+    /*cout << "Inserisci lato quadrato" << '\n';
     cin >> a;
     quadrato q(a);
     // overiding methods
@@ -183,13 +186,13 @@ class poligono {
     cout << "Perimetro = " <<q.area(dper)<< '\n';
     q.~quadrato();
     cout <<'\n';
-    cout << '\n';
+    cout << '\n';*/
 
     /*rettangolo*/
     /*reinitialization vars*/
-    a = 0;
-    cout << "\n/**** Rettangolo Section *****/" << '\n';
-    cout << "Inserisci lato Rettangolo" << '\n';
+    //a = 0;
+    //cout << "\n/**** Rettangolo Section *****/" << '\n';
+    /*cout << "Inserisci lato Rettangolo" << '\n';
     cin >> a;
     cout << "Inserisci lato Rettangolo" << '\n';
     cin >> b;
@@ -198,11 +201,11 @@ class poligono {
     cout << "Area = " << r.area()<< '\n';
     r.~rettangolo();
     cout <<'\n';
-    cout << '\n';
+    cout << '\n';*/
 
     /* Pentagono */
-    cout << "\n/**** Paralelogramma Section *****/" << '\n';
-    cout << "Inserisci lato Paralelogramma" << '\n';
+    //cout << "\n/**** Paralelogramma Section *****/" << '\n';
+    /*cout << "Inserisci lato Paralelogramma" << '\n';
     cin >> a;
     cout << "Inserisci lato Paralelogramma" << '\n';
     cin >> b;
@@ -213,12 +216,12 @@ class poligono {
     cout << "Area = " << p.area()<< '\n';
     p.~paralelogramma();
     cout << '\n';
-    cout <<'\n';
+    cout <<'\n';*/
 
 
     /* Triangolo */
-    cout << "\n/**** Triangolo Section *****/" << '\n';
-    cout << "Inserisci base Triangolo" << '\n';
+    //cout << "\n/**** Triangolo Section *****/" << '\n';
+    /*cout << "Inserisci base Triangolo" << '\n';
     cin >> a;
     cout << "Inserisci lato Triangolo" << '\n';
     cin >> b;
@@ -229,7 +232,7 @@ class poligono {
     trinagolo t(a,b,c,h);
     cout << "Perimetro= " << t.perimetro() << '\n';
     cout << "Area = " << t.area()<< '\n';
-    t.~trinagolo();
+    t.~trinagolo();*/
 
     return 0;
   }

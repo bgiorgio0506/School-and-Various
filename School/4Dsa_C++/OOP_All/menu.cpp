@@ -6,7 +6,6 @@
 #define MAX 100
 // including the menu namespaces
 using namespace std;
-using namespace menu;
 
 
 //MENU methods
@@ -20,14 +19,14 @@ menu:: void ShowMenu(){
   cin >> choosen;
 }
 
-mene:: float TriangoloAltSubMenu(){
+menu::float TriangoloAltSubMenu(){
   lato3 = 0 ;
   cout << "Inserisci altezza" << '\n';
   cin >> lato3;
   return lato3;
 }
 
-menu:: float ShowSubsMenu(){
+menu::float ShowSubsMenu(){
 if (choosen != ""){
     switch (choosen) {
 
@@ -80,7 +79,7 @@ if (choosen != ""){
   }
 }
 
-menu:: float DisplayChoices(){
+menu::float DisplayChoices(){
   switch (choosen) {
     // Writing also the point in case someone want to write 1.
     case (choosen == "1" || "1." ):
@@ -102,6 +101,6 @@ menu:: float DisplayChoices(){
 
 }
 
-menu:: void ShowResults(){
+menu::void ShowResults(){
 
 }

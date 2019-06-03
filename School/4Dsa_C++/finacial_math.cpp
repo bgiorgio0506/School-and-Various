@@ -36,13 +36,13 @@ class bank{
        TotInvSum = decimalP/compaunding;
        TotInvSum = TotInvSum + 1;
        exp =  compaunding * percent+1; //Add one to the exponet
-       TotInvSum =pow(TotInvSum,exp);
+       TotInvSum = pow(TotInvSum,exp);
        TotInv = investiment * TotInvSum;
 
        return TotInv;
      }
 
-     duble CalculateTrueRate(){
+     double CalculateTrueRate(){
        rate AnnualRate;
        double exp;
 
@@ -71,6 +71,6 @@ int main() {
   cin >> AnnualCompounding;
   bank Inve1(TotInvestiment,RatePercent,AnnualCompounding);
   cout << "Final investment is: " << Inve1.CalculateInvestiment() << '\n';
-  Inv.~bank();
+  Inve1.~bank();
   return 0;
 }

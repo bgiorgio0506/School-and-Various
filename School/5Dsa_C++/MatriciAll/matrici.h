@@ -9,7 +9,7 @@ Description : Class decleration for bidimensional Array and prototype decleratio
 */
 class matrici
 {
-private:
+protected:
     typedef int matrice; // type deifinision for matrice (bidimesional array)
     matrice m1[R][C], res[R][C];
     int dim;
@@ -17,8 +17,8 @@ private:
 public:
 //Prototypes Declerations
     matrici(matrice m1[][C]); // Constructor
-    void LoadBidimensionalArray(matrice m1[][C]);
-    void DisplayBiDimensionalArray();
+    int LoadBidimensionalArray(matrice m1[][C]);
+    int DisplayBiDimensionalArray();
     int SumBidimensionalArray(matrice m1[][C], matrice m2[][C]);
     int DifBidimensionalArray(matrice m1[][C], matrice m2[][C]);
     int getBidimesionDimension(){ return dim;}

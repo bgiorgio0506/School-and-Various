@@ -7,7 +7,7 @@ matrici::matrici(matrice m1[][C])
     LoadBidimensionalArray(m1);
 }
 
-void matrici::LoadBidimensionalArray(matrice m1[][C])
+matrici::LoadBidimensionalArray(matrice m1[][C])
 {
     int i, j, dim;
     cout << "Inserisci dimesione della matrice";
@@ -22,7 +22,7 @@ void matrici::LoadBidimensionalArray(matrice m1[][C])
     }
 }
 
-void matrici::DisplayBiDimensionalArray()
+matrici::DisplayBiDimensionalArray()
 {
     int dim = getBidimesionDimension();
     int i, j;

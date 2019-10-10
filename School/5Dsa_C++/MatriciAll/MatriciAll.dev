@@ -30,7 +30,7 @@ CompilerSet=0
 CompilerSettings=
 
 [Unit2]
-FileName=matriciClass.cpp
+FileName=matrici.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -50,7 +50,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=matriciHeader.h
+FileName=matrici.h
 CompileCpp=1
 Folder=
 Compile=1

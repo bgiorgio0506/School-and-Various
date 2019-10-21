@@ -9,7 +9,7 @@ using namespace std;
 
 
 //MENU methods
-menu:: void ShowMenu(){
+menu::void ShowMenu(){
   cout << "Welcome!!" << '\n';
   cout << "** Choose an option by typeing the number **" << '\n';
   cout << "1. Quadrato" << '\n';

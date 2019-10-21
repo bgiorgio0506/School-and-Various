@@ -6,6 +6,7 @@ Imports System.IO
 ' to the credetial stored to the Msql Database.
 ' For more info refer to MySql Connector Assembly Doc
 ' <https://dev.mysql.com/doc/connector-net/en/connector-net-connection-options.html>
+' This code is deprecated best way is to connect vai an API
 ' This code refer to the General License Agreedment.
 ' Copyright By Giorgio Bella 2018
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -24,7 +25,7 @@ Module read_write
 
     Public Sub loginfunc(ByRef conn)
         ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-        ' NOTE: For now this sub don't support encrypted passwords 
+        ' NOTE: For now this sub don't support encrypted passwords
         '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         Try
             nome = LoginForm1.UsernameTextBox.Text 'take data from the text box and stored to a string variable
@@ -32,19 +33,19 @@ Module read_write
             sql = "SELECT * FROM iscritti WHERE nome='" & nome & "'and password='" & password & "'"     ' Query to perform basicly this query look for a name and password in the database
             ' For more security I suggest to encrypt the password given by the user and send it vai ssl connection to the database
             sqlCommand = New MySqlCommand(sql, conn)
-            datareader = sqlCommand.ExecuteReader() 'start the reader 
+            datareader = sqlCommand.ExecuteReader() 'start the reader
             While datareader.Read 'if the query is satisfied login var become true
                 login = True
             End While
             datareader.Close()
-            'result output 
+            'result output
             If (login = True) Then
                 MsgBox("Login Successfull")
             Else
                 MsgBox("Username and Password are wrong")
             End If
         Catch ex As Exception
-            MsgBox("Problem While connecting to our server: " & ex.Message.ToString) ' if there is any problem before or during the query this cath it as exeption 
+            MsgBox("Problem While connecting to our server: " & ex.Message.ToString) ' if there is any problem before or during the query this cath it as exeption
         End Try
     End Sub
     Public Sub write(ByRef conn, ByRef connectionString)

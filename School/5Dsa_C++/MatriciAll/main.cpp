@@ -37,9 +37,10 @@ public:
 			cin >> dim;
 			if (dim >= C)
 			{
-				cout << "Error dimension too big error 400"<<endl;
+				cout << "Error dimension too big error"<<endl;
 			}
 		} while (dim > C);
+		
 		return dim;
 	}
 	void DisplayBidimensional()
@@ -73,6 +74,7 @@ public:
 	{
 		return dim;
 	}
+	
 	~matrici()
 	{
 		cout << "Matrix destroyed";
@@ -82,10 +84,10 @@ public:
 void somma()
 {
 	int dim;
-	matrici m1, m2;
+	matrici m1;
+	matrici m2;
 	dim = m1.LoadDim();
 	m1.LoadBidimensionalArray(dim);
-	m1.DisplayBidimensional(); // Display Matrix
 	m2.LoadBidimensionalArray(dim);
 	m2.DisplayBidimensional(); // Display Matrix
 	for (int i = 0; i < dim; i++)
@@ -138,6 +140,41 @@ void trasposta()
 	m.~matrici();
 }
 
+
+//Laplace 
+int det (int m1 [R][C], int card)
+{
+	int dim, determinante, row, col;
+	determinante = 0;
+	matrici m;
+	dim = m.LoadDim();
+	m.LoadBidimensionalArray(dim);
+	if(dim == 1) determinante = m.m1[0][0];
+	if(dim == 2) determinante = m.m1[1][1] * m.m1[0][0] - m.m1[0][1] * m.m1[1][0]; 
+	else
+	{
+		for (int i = 0; i < dim; i++)
+		{
+			for (int i = 0; i < dim -1; i++)
+			{
+				for (int j = 0; i < dim -1 ; j++)
+				{
+					row = (i < row ?i:i+1);
+					col = i+1;
+					m.res[i][j] = m.m1[row][col];
+				}
+				
+			}
+			if (row % 2 == 0) determinante += m.m1[row][0]*det(m.res, dim - 1);
+			else determinante -= m.m1[row][0] * det(m.res, dim-1);
+			
+		}
+		
+	}
+	return determinante;
+	
+}
+
 class Menu
 {
 public:
@@ -152,6 +189,7 @@ public:
 		cout << "1. Somma" << endl;
 		cout << "2. Differenza" << endl;
 		cout << "3. Trasposta" << endl;
+		cout << "4. Determinante (Laplace)"<<endl;
 		cout << "Press the number of your choise 0 to exit";
 	}
 	int LogicMenu(int chooice)
@@ -170,6 +208,10 @@ public:
 			trasposta();
 			system("CLS");
 			break;
+		case 4:
+			cout<<"Not inplemented yet programm will restart";
+			system("CLS");
+		break;
 		default:
 			cout << "Error option not valid";
 			system("CLS");

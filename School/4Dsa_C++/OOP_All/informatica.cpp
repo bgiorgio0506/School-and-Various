@@ -14,6 +14,11 @@ di uno o più metodi per un solo poligono che ci permette di calcolare in modo d
 Questo programma conterrà un menu sviluppato nel modulo menu.h .
 --Martedì 07/05/19
 Il programma verrà piano piano convertito secondo la programmazione modulare
+--------------------------
+programmazione modulare
+--Martedì 25/06/19
+il programma è modulare per la parte della UI per qualche strano motivo menu menu() non viene riconusciuto
+come construttore probabilmente la mancanza di un progetto ha qualcosa che non piace al compilatore g++
 ******************************************************************************
 * This program is under GNU 3.0 License Copyright 2019 Giorgio Bella
 ******************************************************************************

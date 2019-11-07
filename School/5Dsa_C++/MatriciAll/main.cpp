@@ -15,10 +15,12 @@ public:
 	matrici()
 	{
 		cout << "Matrice inizialied waiting function to run" << endl;
-		system("CLS");
+		system("clear");
 	}
+
 	void LoadBidimensionalArray(int uniqueDimension)
 	{
+		dim = uniqueDimension;
 		int i, j;
 		for (i = 0; i < dim; i++)
 		{
@@ -92,7 +94,7 @@ void somma()
 	m2.DisplayBidimensional(); // Display Matrix
 	for (int i = 0; i < dim; i++)
 	{
-		for (int j = 0; j < dim; i++)
+		for (int j = 0; j < dim; j++)
 		{
 			m1.res[i][j] = m1.m1[i][j] + m2.m1[i][j]; //Matrix sum
 		}
@@ -182,7 +184,7 @@ public:
 	Menu()
 	{
 		cout << "Initializing Menu..." << endl;
-		system("CLS");
+		system("clear");
 	}
 	void Displaymenu()
 	{
@@ -198,15 +200,14 @@ public:
 		{
 		case 1:
 			somma();
-			system("CLS");
 			break;
 		case 2:
 			diffMatrix();
-			system("CLS");
+			system("clear");
 			break;
 		case 3:
 			trasposta();
-			system("CLS");
+			system("clear");
 			break;
 		case 4:
 			cout<<"Not inplemented yet programm will restart";
@@ -214,7 +215,7 @@ public:
 		break;
 		default:
 			cout << "Error option not valid";
-			system("CLS");
+			system("clear");
 			break;
 		}
 	}
@@ -229,6 +230,7 @@ int main()
 		menu.Displaymenu();
 		cin >> choose;
 		menu.LogicMenu(choose);
+		continue;
 	} while (choose == 0);
 
 	system("PAUSE");
